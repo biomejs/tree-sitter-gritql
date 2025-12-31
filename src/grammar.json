@@ -5929,6 +5929,10 @@
         {
           "type": "STRING",
           "value": "xml"
+        },
+        {
+          "type": "STRING",
+          "value": "vue"
         }
       ]
     },

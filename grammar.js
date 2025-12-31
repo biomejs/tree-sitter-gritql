@@ -611,6 +611,7 @@ module.exports = grammar({
         'kotlin',
         'elixir',
         'xml',
+        "vue",
       ),
 
     snippetContent: (_$) => /(?:[^`\\]|\\\$|\\\\|\\`|\\n)*/,

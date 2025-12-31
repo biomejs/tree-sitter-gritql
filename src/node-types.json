@@ -14909,11 +14909,15 @@
   },
   {
     "type": "variable",
-    "named": false
+    "named": true
   },
   {
     "type": "variable",
-    "named": true
+    "named": false
+  },
+  {
+    "type": "vue",
+    "named": false
   },
   {
     "type": "where",

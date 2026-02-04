@@ -6,7 +6,7 @@
       "camelcase": "GritQL",
       "title": "GritQL",
       "scope": "source.grit",
-      "file-types": ["gritql"],
+      "file-types": ["grit", "gritql"],
       "injection-regex": "^gritql$",
       "class-name": "TreeSitterGritql"
     }

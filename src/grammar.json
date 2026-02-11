@@ -3204,7 +3204,11 @@
       "members": [
         {
           "type": "STRING",
-          "value": "log("
+          "value": "log"
+        },
+        {
+          "type": "STRING",
+          "value": "("
         },
         {
           "type": "CHOICE",
@@ -3360,7 +3364,11 @@
       "members": [
         {
           "type": "STRING",
-          "value": "range("
+          "value": "range"
+        },
+        {
+          "type": "STRING",
+          "value": "("
         },
         {
           "type": "CHOICE",
@@ -6097,8 +6105,29 @@
       "value": "\"(?:[^\"\\\\]|\\\\.)*\""
     },
     "regex": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "r\""
+        },
+        {
+          "type": "FIELD",
+          "name": "regex",
+          "content": {
+            "type": "SYMBOL",
+            "name": "regexInner"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "\""
+        }
+      ]
+    },
+    "regexInner": {
       "type": "PATTERN",
-      "value": "r\"(?:[^\"\\\\]|\\\\.)*\""
+      "value": "(?:[^\"\\\\]|\\\\.)*"
     },
     "snippetRegex": {
       "type": "SEQ",

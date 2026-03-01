@@ -386,7 +386,8 @@ module.exports = grammar({
 
     log: ($) =>
       seq(
-        'log(',
+        'log',
+        '(',
         choice(
           $._logMessage,
           $._logVariable,
@@ -404,7 +405,8 @@ module.exports = grammar({
 
     range: ($) =>
       seq(
-        'range(',
+        'range',
+        '(',
         choice(
           $._start_line,
           $._end_line,
@@ -650,7 +652,8 @@ module.exports = grammar({
     // string literals
     stringConstant: (_$) => /"(?:[^"\\]|\\.)*"/,
 
-    regex: (_$) => /r"(?:[^"\\]|\\.)*"/,
+    regex: ($) => seq('r"', field('regex', $.regexInner), '"'),
+    regexInner: (_$) => /(?:[^"\\]|\\.)*/,
 
     snippetRegex: ($) => seq('r', field('snippet', $.backtickSnippet)),
 

@@ -12475,6 +12475,22 @@
     }
   },
   {
+    "type": "regex",
+    "named": true,
+    "fields": {
+      "regex": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "regexInner",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "regexPattern",
     "named": true,
     "fields": {
@@ -14752,7 +14768,7 @@
     "named": false
   },
   {
-    "type": "log(",
+    "type": "log",
     "named": false
   },
   {
@@ -14820,7 +14836,11 @@
     "named": false
   },
   {
-    "type": "range(",
+    "type": "r\"",
+    "named": false
+  },
+  {
+    "type": "range",
     "named": false
   },
   {
@@ -14828,7 +14848,7 @@
     "named": false
   },
   {
-    "type": "regex",
+    "type": "regexInner",
     "named": true
   },
   {

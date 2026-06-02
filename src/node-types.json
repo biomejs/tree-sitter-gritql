@@ -13407,7 +13407,6 @@
   {
     "type": "source_file",
     "named": true,
-    "root": true,
     "fields": {
       "definitions": {
         "multiple": true,
@@ -14656,8 +14655,7 @@
   },
   {
     "type": "comment",
-    "named": true,
-    "extra": true
+    "named": true
   },
   {
     "type": "contains",
@@ -14953,6 +14951,10 @@
   },
   {
     "type": "yaml",
+    "named": false
+  },
+  {
+    "type": "zig",
     "named": false
   },
   {

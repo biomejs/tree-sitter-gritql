@@ -614,6 +614,7 @@ module.exports = grammar({
         'elixir',
         'xml',
         "vue",
+        'zig',
       ),
 
     snippetContent: (_$) => /(?:[^`\\]|\\\$|\\\\|\\`|\\n)*/,

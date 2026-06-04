@@ -1,5 +1,4 @@
 {
-  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "gritql",
   "word": "name",
   "rules": {
@@ -5941,6 +5940,10 @@
         {
           "type": "STRING",
           "value": "vue"
+        },
+        {
+          "type": "STRING",
+          "value": "zig"
         }
       ]
     },
@@ -6226,6 +6229,5 @@
   "precedences": [],
   "externals": [],
   "inline": [],
-  "supertypes": [],
-  "reserved": {}
+  "supertypes": []
 }

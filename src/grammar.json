@@ -5947,72 +5947,17 @@
         }
       ]
     },
-    "snippetContent": {
-      "type": "PATTERN",
-      "value": "(?:[^`\\\\]|\\\\\\$|\\\\\\\\|\\\\`|\\\\n)*"
-    },
     "backtickSnippet": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "`"
-        },
-        {
-          "type": "FIELD",
-          "name": "content",
-          "content": {
-            "type": "SYMBOL",
-            "name": "snippetContent"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "`"
-        }
-      ]
+      "type": "PATTERN",
+      "value": "`(?:[^`\\\\]|\\\\\\$|\\\\\\\\|\\\\`|\\\\n)*`"
     },
     "rawBacktickSnippet": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "raw`"
-        },
-        {
-          "type": "FIELD",
-          "name": "content",
-          "content": {
-            "type": "SYMBOL",
-            "name": "snippetContent"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "`"
-        }
-      ]
+      "type": "PATTERN",
+      "value": "raw`(?:[^`\\\\]|\\\\\\$|\\\\\\\\|\\\\`|\\\\n)*`"
     },
     "doubleQuoteSnippet": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "\""
-        },
-        {
-          "type": "FIELD",
-          "name": "content",
-          "content": {
-            "type": "SYMBOL",
-            "name": "snippetContent"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "\""
-        }
-      ]
+      "type": "PATTERN",
+      "value": "\"(?:[^\"\\\\]|\\\\\\$|\\\\\\\\|\\\\\"|\\\\n)*\""
     },
     "languageSpecificSnippet": {
       "type": "SEQ",

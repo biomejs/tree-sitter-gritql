@@ -617,16 +617,11 @@ module.exports = grammar({
         'zig',
       ),
 
-    snippetContent: (_$) => /(?:[^`\\]|\\\$|\\\\|\\`|\\n)*/,
+    backtickSnippet: (_$) => /`(?:[^`\\]|\\\$|\\\\|\\`|\\n)*`/,
 
-    // TODO: Use choice to consolidate backtickSnippet, rawBacktickSnippet, doubleQuoteSnippet
-    // into a single rule
+    rawBacktickSnippet: (_$) => /raw`(?:[^`\\]|\\\$|\\\\|\\`|\\n)*`/,
 
-    backtickSnippet: ($) => seq('`', field('content', $.snippetContent), '`'),
-
-    rawBacktickSnippet: ($) => seq('raw`', field('content', $.snippetContent), '`'),
-
-    doubleQuoteSnippet: ($) => seq('"', field('content', $.snippetContent), '"'),
+    doubleQuoteSnippet: (_$) => /"(?:[^"\\]|\\\$|\\\\|\\"|\\n)*"/,
 
     languageSpecificSnippet: ($) =>
       seq(field('language', $.languageName), field('snippet', $.doubleQuoteSnippet)),

@@ -648,22 +648,6 @@
     }
   },
   {
-    "type": "backtickSnippet",
-    "named": true,
-    "fields": {
-      "content": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "snippetContent",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "bubble",
     "named": true,
     "fields": {
@@ -1595,22 +1579,6 @@
           "named": true
         }
       ]
-    }
-  },
-  {
-    "type": "doubleQuoteSnippet",
-    "named": true,
-    "fields": {
-      "content": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "snippetContent",
-            "named": true
-          }
-        ]
-      }
     }
   },
   {
@@ -12459,22 +12427,6 @@
     }
   },
   {
-    "type": "rawBacktickSnippet",
-    "named": true,
-    "fields": {
-      "content": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "snippetContent",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "regex",
     "named": true,
     "fields": {
@@ -14606,10 +14558,6 @@
     "named": false
   },
   {
-    "type": "`",
-    "named": false
-  },
-  {
     "type": "after",
     "named": false
   },
@@ -14632,6 +14580,10 @@
   {
     "type": "ast",
     "named": false
+  },
+  {
+    "type": "backtickSnippet",
+    "named": true
   },
   {
     "type": "before",
@@ -14675,6 +14627,10 @@
   },
   {
     "type": "doubleConstant",
+    "named": true
+  },
+  {
+    "type": "doubleQuoteSnippet",
     "named": true
   },
   {
@@ -14842,8 +14798,8 @@
     "named": false
   },
   {
-    "type": "raw`",
-    "named": false
+    "type": "rawBacktickSnippet",
+    "named": true
   },
   {
     "type": "regexInner",
@@ -14867,10 +14823,6 @@
   },
   {
     "type": "signedIntConstant",
-    "named": true
-  },
-  {
-    "type": "snippetContent",
     "named": true
   },
   {
@@ -14927,11 +14879,11 @@
   },
   {
     "type": "variable",
-    "named": true
+    "named": false
   },
   {
     "type": "variable",
-    "named": false
+    "named": true
   },
   {
     "type": "vue",

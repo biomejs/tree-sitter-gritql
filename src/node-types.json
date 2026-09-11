@@ -14794,6 +14794,10 @@
     "named": true
   },
   {
+    "type": "nix",
+    "named": false
+  },
+  {
     "type": "noBraces",
     "named": true
   },
@@ -14927,11 +14931,11 @@
   },
   {
     "type": "variable",
-    "named": true
+    "named": false
   },
   {
     "type": "variable",
-    "named": false
+    "named": true
   },
   {
     "type": "vue",

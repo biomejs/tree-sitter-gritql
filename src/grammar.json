@@ -5948,8 +5948,26 @@
       ]
     },
     "snippetContent": {
-      "type": "PATTERN",
-      "value": "(?:[^`\\\\]|\\\\\\$|\\\\\\\\|\\\\`|\\\\n)*"
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 1,
+        "content": {
+          "type": "PATTERN",
+          "value": "(?:[^`\\\\]|\\\\\\$|\\\\\\\\|\\\\`|\\\\n)+"
+        }
+      }
+    },
+    "_doubleQuoteSnippetContent": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 1,
+        "content": {
+          "type": "PATTERN",
+          "value": "(?:[^\"\\\\]|\\\\\\$|\\\\\\\\|\\\\\"|\\\\n)+"
+        }
+      }
     },
     "backtickSnippet": {
       "type": "SEQ",
@@ -5959,12 +5977,20 @@
           "value": "`"
         },
         {
-          "type": "FIELD",
-          "name": "content",
-          "content": {
-            "type": "SYMBOL",
-            "name": "snippetContent"
-          }
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "content",
+              "content": {
+                "type": "SYMBOL",
+                "name": "snippetContent"
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -5980,12 +6006,20 @@
           "value": "raw`"
         },
         {
-          "type": "FIELD",
-          "name": "content",
-          "content": {
-            "type": "SYMBOL",
-            "name": "snippetContent"
-          }
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "content",
+              "content": {
+                "type": "SYMBOL",
+                "name": "snippetContent"
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -6001,12 +6035,25 @@
           "value": "\""
         },
         {
-          "type": "FIELD",
-          "name": "content",
-          "content": {
-            "type": "SYMBOL",
-            "name": "snippetContent"
-          }
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "content",
+              "content": {
+                "type": "ALIAS",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_doubleQuoteSnippetContent"
+                },
+                "named": true,
+                "value": "snippetContent"
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",

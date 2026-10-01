@@ -1,0 +1,34 @@
+>`console.$_($content)` where {
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#         ^^ source.gritql string.quoted.other.snippet.gritql variable.language.anonymous.gritql
+#           ^ source.gritql string.quoted.other.snippet.gritql
+#            ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                    ^ source.gritql string.quoted.other.snippet.gritql
+#                     ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                      ^ source.gritql
+#                       ^^^^^ source.gritql keyword.control.gritql
+#                            ^ source.gritql
+#                             ^ source.gritql punctuation.section.braces.begin.gritql
+>  $content <: contains `secret` until `sanitized($_)`
+#^^ source.gritql
+#  ^^^^^^^^ source.gritql variable.other.gritql
+#          ^ source.gritql
+#           ^^ source.gritql keyword.operator.match.gritql
+#             ^ source.gritql
+#              ^^^^^^^^ source.gritql keyword.operator.word.gritql
+#                      ^ source.gritql
+#                       ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                        ^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                              ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                               ^ source.gritql
+#                                ^^^^^ source.gritql keyword.control.gritql
+#                                     ^ source.gritql
+#                                      ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                                       ^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                                                 ^^ source.gritql string.quoted.other.snippet.gritql variable.language.anonymous.gritql
+#                                                   ^ source.gritql string.quoted.other.snippet.gritql
+#                                                    ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

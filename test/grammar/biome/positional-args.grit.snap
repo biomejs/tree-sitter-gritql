@@ -1,0 +1,36 @@
+>pattern console_method_to_info($method) {
+#^^^^^^^ source.gritql meta.definition.gritql storage.type.function.gritql
+#       ^ source.gritql meta.definition.gritql
+#        ^^^^^^^^^^^^^^^^^^^^^^ source.gritql meta.definition.gritql entity.name.function.gritql
+#                              ^ source.gritql meta.definition.gritql punctuation.section.parens.begin.gritql
+#                               ^^^^^^^ source.gritql meta.definition.gritql variable.parameter.gritql
+#                                      ^ source.gritql meta.definition.gritql punctuation.section.parens.end.gritql
+#                                       ^ source.gritql
+#                                        ^ source.gritql punctuation.section.braces.begin.gritql
+>  `console.$method($message)` => `console.info($message)`
+#^^ source.gritql
+#  ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#   ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#           ^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                  ^ source.gritql string.quoted.other.snippet.gritql
+#                   ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                           ^ source.gritql string.quoted.other.snippet.gritql
+#                            ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                             ^ source.gritql
+#                              ^^ source.gritql keyword.operator.rewrite.gritql
+#                                ^ source.gritql
+#                                 ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                                  ^^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                                               ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                                                       ^ source.gritql string.quoted.other.snippet.gritql
+#                                                        ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>console_method_to_info(`log`)
+#^^^^^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                      ^ source.gritql punctuation.section.parens.begin.gritql
+#                       ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                        ^^^ source.gritql string.quoted.other.snippet.gritql
+#                           ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                            ^ source.gritql punctuation.section.parens.end.gritql
+>

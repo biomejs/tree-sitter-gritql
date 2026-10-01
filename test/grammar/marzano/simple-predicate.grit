@@ -1,0 +1,15 @@
+engine marzano(0.1)
+language js
+
+predicate is_foo($name) {
+    $name <: `Foo`
+}
+predicate rewrite($name) {
+    $name => `Bar`,
+}
+
+`<$name $props>$children</$name>` where {
+    if (is_foo($name)) {
+          rewrite($name)
+    }
+}

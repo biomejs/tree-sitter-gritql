@@ -1,0 +1,10 @@
+>r"test\\.*[^'\"]"
+#^ source.gritql string.regexp.gritql storage.type.string.gritql
+# ^ source.gritql string.regexp.gritql punctuation.definition.string.begin.gritql
+#  ^^^^ source.gritql string.regexp.gritql
+#      ^^ source.gritql string.regexp.gritql constant.character.escape.gritql
+#        ^^^^^ source.gritql string.regexp.gritql
+#             ^^ source.gritql string.regexp.gritql constant.character.escape.gritql
+#               ^ source.gritql string.regexp.gritql
+#                ^ source.gritql string.regexp.gritql punctuation.definition.string.end.gritql
+>

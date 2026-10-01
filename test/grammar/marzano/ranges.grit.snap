@@ -1,0 +1,27 @@
+>language js(js_do_not_use)
+#^^^^^^^^ source.gritql keyword.control.directive.language.gritql
+#        ^ source.gritql
+#         ^^ source.gritql support.constant.language.gritql
+#           ^ source.gritql punctuation.section.parens.begin.gritql
+#            ^^^^^^^^^^^^^ source.gritql support.constant.language-flavor.gritql
+#                         ^ source.gritql punctuation.section.parens.end.gritql
+>$obj where {
+#^^^^ source.gritql variable.other.gritql
+#    ^ source.gritql
+#     ^^^^^ source.gritql keyword.control.gritql
+#          ^ source.gritql
+#           ^ source.gritql punctuation.section.braces.begin.gritql
+>    $obj <: object($properties),
+#^^^^ source.gritql
+#    ^^^^ source.gritql variable.other.gritql
+#        ^ source.gritql
+#         ^^ source.gritql keyword.operator.match.gritql
+#           ^ source.gritql
+#            ^^^^^^ source.gritql entity.name.function.gritql
+#                  ^ source.gritql punctuation.section.parens.begin.gritql
+#                   ^^^^^^^^^^^ source.gritql variable.other.gritql
+#                              ^ source.gritql punctuation.section.parens.end.gritql
+#                               ^ source.gritql punctuation.separator.comma.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

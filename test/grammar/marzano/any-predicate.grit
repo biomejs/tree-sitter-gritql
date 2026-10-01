@@ -1,0 +1,7 @@
+language js
+
+$x where any {
+    true,
+    $x => `foo`,
+    false,
+}

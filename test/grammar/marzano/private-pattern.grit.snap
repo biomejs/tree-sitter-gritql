@@ -1,0 +1,39 @@
+>private pattern nice() {
+#^^^^^^^ source.gritql meta.definition.gritql storage.modifier.gritql
+#       ^ source.gritql meta.definition.gritql
+#        ^^^^^^^ source.gritql meta.definition.gritql storage.type.function.gritql
+#               ^ source.gritql meta.definition.gritql
+#                ^^^^ source.gritql meta.definition.gritql entity.name.function.gritql
+#                    ^ source.gritql meta.definition.gritql punctuation.section.parens.begin.gritql
+#                     ^ source.gritql meta.definition.gritql punctuation.section.parens.end.gritql
+#                      ^ source.gritql
+#                       ^ source.gritql punctuation.section.braces.begin.gritql
+>  `foo`
+#^^ source.gritql
+#  ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#   ^^^ source.gritql string.quoted.other.snippet.gritql
+#      ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>
+>pattern foo() {
+#^^^^^^^ source.gritql meta.definition.gritql storage.type.function.gritql
+#       ^ source.gritql meta.definition.gritql
+#        ^^^ source.gritql meta.definition.gritql entity.name.function.gritql
+#           ^ source.gritql meta.definition.gritql punctuation.section.parens.begin.gritql
+#            ^ source.gritql meta.definition.gritql punctuation.section.parens.end.gritql
+#             ^ source.gritql
+#              ^ source.gritql punctuation.section.braces.begin.gritql
+>  `bar`
+#^^ source.gritql
+#  ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#   ^^^ source.gritql string.quoted.other.snippet.gritql
+#      ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>
+>nice()
+#^^^^ source.gritql entity.name.function.gritql
+#    ^ source.gritql punctuation.section.parens.begin.gritql
+#     ^ source.gritql punctuation.section.parens.end.gritql
+>

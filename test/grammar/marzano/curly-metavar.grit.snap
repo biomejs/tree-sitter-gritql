@@ -1,0 +1,83 @@
+>pattern foo($bar) {
+#^^^^^^^ source.gritql meta.definition.gritql storage.type.function.gritql
+#       ^ source.gritql meta.definition.gritql
+#        ^^^ source.gritql meta.definition.gritql entity.name.function.gritql
+#           ^ source.gritql meta.definition.gritql punctuation.section.parens.begin.gritql
+#            ^^^^ source.gritql meta.definition.gritql variable.parameter.gritql
+#                ^ source.gritql meta.definition.gritql punctuation.section.parens.end.gritql
+#                 ^ source.gritql
+#                  ^ source.gritql punctuation.section.braces.begin.gritql
+>    class_declaration(
+#^^^^ source.gritql
+#    ^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                     ^ source.gritql punctuation.section.parens.begin.gritql
+>        name = $className,
+#^^^^^^^^ source.gritql
+#        ^^^^ source.gritql variable.parameter.gritql
+#            ^ source.gritql
+#             ^ source.gritql keyword.operator.assignment.gritql
+#              ^ source.gritql
+#               ^^^^^^^^^^ source.gritql variable.other.gritql
+#                         ^ source.gritql punctuation.separator.comma.gritql
+>        heritage = contains "Component",
+#^^^^^^^^ source.gritql
+#        ^^^^^^^^ source.gritql variable.parameter.gritql
+#                ^ source.gritql
+#                 ^ source.gritql keyword.operator.assignment.gritql
+#                  ^ source.gritql
+#                   ^^^^^^^^ source.gritql keyword.operator.word.gritql
+#                           ^ source.gritql
+#                            ^ source.gritql string.quoted.double.gritql punctuation.definition.string.begin.gritql
+#                             ^^^^^^^^^ source.gritql string.quoted.double.gritql
+#                                      ^ source.gritql string.quoted.double.gritql punctuation.definition.string.end.gritql
+#                                       ^ source.gritql punctuation.separator.comma.gritql
+>        body = $body
+#^^^^^^^^ source.gritql
+#        ^^^^ source.gritql variable.parameter.gritql
+#            ^ source.gritql
+#             ^ source.gritql keyword.operator.assignment.gritql
+#              ^ source.gritql
+#               ^^^^^ source.gritql variable.other.gritql
+>    ) => `const $className = $[bar]`
+#^^^^ source.gritql
+#    ^ source.gritql punctuation.section.parens.end.gritql
+#     ^ source.gritql
+#      ^^ source.gritql keyword.operator.rewrite.gritql
+#        ^ source.gritql
+#         ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#          ^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                ^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                          ^^^ source.gritql string.quoted.other.snippet.gritql
+#                             ^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql punctuation.definition.variable.begin.gritql
+#                               ^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                                  ^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql punctuation.definition.variable.end.gritql
+#                                   ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>and {
+#^^^ source.gritql keyword.operator.word.gritql
+#   ^ source.gritql
+#    ^ source.gritql punctuation.section.braces.begin.gritql
+>   $baz = "{ b = 2; }",
+#^^^ source.gritql
+#   ^^^^ source.gritql variable.other.gritql
+#       ^ source.gritql
+#        ^ source.gritql keyword.operator.assignment.gritql
+#         ^ source.gritql
+#          ^ source.gritql string.quoted.double.gritql punctuation.definition.string.begin.gritql
+#           ^^^^^^^^^^ source.gritql string.quoted.double.gritql
+#                     ^ source.gritql string.quoted.double.gritql punctuation.definition.string.end.gritql
+#                      ^ source.gritql punctuation.separator.comma.gritql
+>   foo(bar = $baz)
+#^^^ source.gritql
+#   ^^^ source.gritql entity.name.function.gritql
+#      ^ source.gritql punctuation.section.parens.begin.gritql
+#       ^^^ source.gritql variable.parameter.gritql
+#          ^ source.gritql
+#           ^ source.gritql keyword.operator.assignment.gritql
+#            ^ source.gritql
+#             ^^^^ source.gritql variable.other.gritql
+#                 ^ source.gritql punctuation.section.parens.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

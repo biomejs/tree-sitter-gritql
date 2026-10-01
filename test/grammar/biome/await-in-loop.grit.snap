@@ -1,0 +1,119 @@
+>`await $value` as $await where {
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#       ^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#             ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#              ^ source.gritql
+#               ^^ source.gritql keyword.operator.word.gritql
+#                 ^ source.gritql
+#                  ^^^^^^ source.gritql variable.other.gritql
+#                        ^ source.gritql
+#                         ^^^^^ source.gritql keyword.control.gritql
+#                              ^ source.gritql
+#                               ^ source.gritql punctuation.section.braces.begin.gritql
+>    $await <: within or {
+#^^^^ source.gritql
+#    ^^^^^^ source.gritql variable.other.gritql
+#          ^ source.gritql
+#           ^^ source.gritql keyword.operator.match.gritql
+#             ^ source.gritql
+#              ^^^^^^ source.gritql keyword.operator.word.gritql
+#                    ^ source.gritql
+#                     ^^ source.gritql keyword.operator.word.gritql
+#                       ^ source.gritql
+#                        ^ source.gritql punctuation.section.braces.begin.gritql
+>        JsForStatement(),
+#^^^^^^^^ source.gritql
+#        ^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                      ^ source.gritql punctuation.section.parens.begin.gritql
+#                       ^ source.gritql punctuation.section.parens.end.gritql
+#                        ^ source.gritql punctuation.separator.comma.gritql
+>        JsForInStatement(),
+#^^^^^^^^ source.gritql
+#        ^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                        ^ source.gritql punctuation.section.parens.begin.gritql
+#                         ^ source.gritql punctuation.section.parens.end.gritql
+#                          ^ source.gritql punctuation.separator.comma.gritql
+>        JsForOfStatement(),
+#^^^^^^^^ source.gritql
+#        ^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                        ^ source.gritql punctuation.section.parens.begin.gritql
+#                         ^ source.gritql punctuation.section.parens.end.gritql
+#                          ^ source.gritql punctuation.separator.comma.gritql
+>        JsWhileStatement(),
+#^^^^^^^^ source.gritql
+#        ^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                        ^ source.gritql punctuation.section.parens.begin.gritql
+#                         ^ source.gritql punctuation.section.parens.end.gritql
+#                          ^ source.gritql punctuation.separator.comma.gritql
+>        JsDoWhileStatement(),
+#^^^^^^^^ source.gritql
+#        ^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                          ^ source.gritql punctuation.section.parens.begin.gritql
+#                           ^ source.gritql punctuation.section.parens.end.gritql
+#                            ^ source.gritql punctuation.separator.comma.gritql
+>    } until or {
+#^^^^ source.gritql
+#    ^ source.gritql punctuation.section.braces.end.gritql
+#     ^ source.gritql
+#      ^^^^^ source.gritql keyword.control.gritql
+#           ^ source.gritql
+#            ^^ source.gritql keyword.operator.word.gritql
+#              ^ source.gritql
+#               ^ source.gritql punctuation.section.braces.begin.gritql
+>        JsFunctionDeclaration(),
+#^^^^^^^^ source.gritql
+#        ^^^^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                             ^ source.gritql punctuation.section.parens.begin.gritql
+#                              ^ source.gritql punctuation.section.parens.end.gritql
+#                               ^ source.gritql punctuation.separator.comma.gritql
+>        JsFunctionExpression(),
+#^^^^^^^^ source.gritql
+#        ^^^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                            ^ source.gritql punctuation.section.parens.begin.gritql
+#                             ^ source.gritql punctuation.section.parens.end.gritql
+#                              ^ source.gritql punctuation.separator.comma.gritql
+>        JsArrowFunctionExpression(),
+#^^^^^^^^ source.gritql
+#        ^^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                                 ^ source.gritql punctuation.section.parens.begin.gritql
+#                                  ^ source.gritql punctuation.section.parens.end.gritql
+#                                   ^ source.gritql punctuation.separator.comma.gritql
+>        JsMethodClassMember(),
+#^^^^^^^^ source.gritql
+#        ^^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                           ^ source.gritql punctuation.section.parens.begin.gritql
+#                            ^ source.gritql punctuation.section.parens.end.gritql
+#                             ^ source.gritql punctuation.separator.comma.gritql
+>        JsMethodObjectMember(),
+#^^^^^^^^ source.gritql
+#        ^^^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                            ^ source.gritql punctuation.section.parens.begin.gritql
+#                             ^ source.gritql punctuation.section.parens.end.gritql
+#                              ^ source.gritql punctuation.separator.comma.gritql
+>    },
+#^^^^ source.gritql
+#    ^ source.gritql punctuation.section.braces.end.gritql
+#     ^ source.gritql punctuation.separator.comma.gritql
+>    register_diagnostic(span = $await, message = "Unexpected await inside a loop")
+#^^^^ source.gritql
+#    ^^^^^^^^^^^^^^^^^^^ source.gritql support.function.builtin.gritql
+#                       ^ source.gritql punctuation.section.parens.begin.gritql
+#                        ^^^^ source.gritql variable.parameter.gritql
+#                            ^ source.gritql
+#                             ^ source.gritql keyword.operator.assignment.gritql
+#                              ^ source.gritql
+#                               ^^^^^^ source.gritql variable.other.gritql
+#                                     ^ source.gritql punctuation.separator.comma.gritql
+#                                      ^ source.gritql
+#                                       ^^^^^^^ source.gritql variable.parameter.gritql
+#                                              ^ source.gritql
+#                                               ^ source.gritql keyword.operator.assignment.gritql
+#                                                ^ source.gritql
+#                                                 ^ source.gritql string.quoted.double.gritql punctuation.definition.string.begin.gritql
+#                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql string.quoted.double.gritql
+#                                                                                ^ source.gritql string.quoted.double.gritql punctuation.definition.string.end.gritql
+#                                                                                 ^ source.gritql punctuation.section.parens.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

@@ -1,0 +1,19 @@
+>language php(only)
+#^^^^^^^^ source.gritql keyword.control.directive.language.gritql
+#        ^ source.gritql
+#         ^^^ source.gritql support.constant.language.gritql
+#            ^ source.gritql punctuation.section.parens.begin.gritql
+#             ^^^^ source.gritql support.constant.language-flavor.gritql
+#                 ^ source.gritql punctuation.section.parens.end.gritql
+>
+>`^a=>^_` => `^a=>24`
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#       ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#        ^ source.gritql
+#         ^^ source.gritql keyword.operator.rewrite.gritql
+#           ^ source.gritql
+#            ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#             ^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                   ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>

@@ -1,0 +1,57 @@
+>`const capital = $val` where {
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^^^^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                 ^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                     ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                      ^ source.gritql
+#                       ^^^^^ source.gritql keyword.control.gritql
+#                            ^ source.gritql
+#                             ^ source.gritql punctuation.section.braces.begin.gritql
+>  $capitals = { england: `london`, ours: $val },
+#^^ source.gritql
+#  ^^^^^^^^^ source.gritql variable.other.gritql
+#           ^ source.gritql
+#            ^ source.gritql keyword.operator.assignment.gritql
+#             ^ source.gritql
+#              ^ source.gritql punctuation.section.braces.begin.gritql
+#               ^ source.gritql
+#                ^^^^^^^ source.gritql support.type.property-name.gritql
+#                       ^ source.gritql punctuation.separator.key-value.gritql
+#                        ^ source.gritql
+#                         ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                          ^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                                ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                                 ^ source.gritql punctuation.separator.comma.gritql
+#                                  ^ source.gritql
+#                                   ^^^^ source.gritql support.type.property-name.gritql
+#                                       ^ source.gritql punctuation.separator.key-value.gritql
+#                                        ^ source.gritql
+#                                         ^^^^ source.gritql variable.other.gritql
+#                                             ^ source.gritql
+#                                              ^ source.gritql punctuation.section.braces.end.gritql
+#                                               ^ source.gritql punctuation.separator.comma.gritql
+>  $capitals.ours <: `paris`,
+#^^ source.gritql
+#  ^^^^^^^^^ source.gritql variable.other.gritql
+#           ^ source.gritql punctuation.accessor.gritql
+#            ^^^^ source.gritql variable.other.property.gritql
+#                ^ source.gritql
+#                 ^^ source.gritql keyword.operator.match.gritql
+#                   ^ source.gritql
+#                    ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                     ^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                          ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                           ^ source.gritql punctuation.separator.comma.gritql
+>  $val => $capitals.england,
+#^^ source.gritql
+#  ^^^^ source.gritql variable.other.gritql
+#      ^ source.gritql
+#       ^^ source.gritql keyword.operator.rewrite.gritql
+#         ^ source.gritql
+#          ^^^^^^^^^ source.gritql variable.other.gritql
+#                   ^ source.gritql punctuation.accessor.gritql
+#                    ^^^^^^^ source.gritql variable.other.property.gritql
+#                           ^ source.gritql punctuation.separator.comma.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

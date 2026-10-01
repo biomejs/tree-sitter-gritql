@@ -1,0 +1,27 @@
+>`console.log($arg)` where {
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#             ^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                 ^ source.gritql string.quoted.other.snippet.gritql
+#                  ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                   ^ source.gritql
+#                    ^^^^^ source.gritql keyword.control.gritql
+#                         ^ source.gritql
+#                          ^ source.gritql punctuation.section.braces.begin.gritql
+>    $arg => capitalize(string = $arg)
+#^^^^ source.gritql
+#    ^^^^ source.gritql variable.other.gritql
+#        ^ source.gritql
+#         ^^ source.gritql keyword.operator.rewrite.gritql
+#           ^ source.gritql
+#            ^^^^^^^^^^ source.gritql support.function.builtin.gritql
+#                      ^ source.gritql punctuation.section.parens.begin.gritql
+#                       ^^^^^^ source.gritql variable.parameter.gritql
+#                             ^ source.gritql
+#                              ^ source.gritql keyword.operator.assignment.gritql
+#                               ^ source.gritql
+#                                ^^^^ source.gritql variable.other.gritql
+#                                    ^ source.gritql punctuation.section.parens.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

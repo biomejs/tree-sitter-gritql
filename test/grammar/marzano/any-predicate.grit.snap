@@ -1,0 +1,34 @@
+>language js
+#^^^^^^^^ source.gritql keyword.control.directive.language.gritql
+#        ^ source.gritql
+#         ^^ source.gritql support.constant.language.gritql
+>
+>$x where any {
+#^^ source.gritql variable.other.gritql
+#  ^ source.gritql
+#   ^^^^^ source.gritql keyword.control.gritql
+#        ^ source.gritql
+#         ^^^ source.gritql keyword.operator.word.gritql
+#            ^ source.gritql
+#             ^ source.gritql punctuation.section.braces.begin.gritql
+>    true,
+#^^^^ source.gritql
+#    ^^^^ source.gritql constant.language.boolean.gritql
+#        ^ source.gritql punctuation.separator.comma.gritql
+>    $x => `foo`,
+#^^^^ source.gritql
+#    ^^ source.gritql variable.other.gritql
+#      ^ source.gritql
+#       ^^ source.gritql keyword.operator.rewrite.gritql
+#         ^ source.gritql
+#          ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#           ^^^ source.gritql string.quoted.other.snippet.gritql
+#              ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#               ^ source.gritql punctuation.separator.comma.gritql
+>    false,
+#^^^^ source.gritql
+#    ^^^^^ source.gritql constant.language.boolean.gritql
+#         ^ source.gritql punctuation.separator.comma.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

@@ -1,0 +1,4 @@
+language js(js_do_not_use)
+$obj where {
+    $obj <: object($properties),
+}

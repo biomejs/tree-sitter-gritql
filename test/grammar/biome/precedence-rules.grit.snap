@@ -1,0 +1,178 @@
+>js"math($a)" where {
+#^^ source.gritql string.quoted.other.snippet.gritql storage.type.string.gritql
+#  ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#   ^^^^^ source.gritql string.quoted.other.snippet.gritql
+#        ^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#          ^ source.gritql string.quoted.other.snippet.gritql
+#           ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#            ^ source.gritql
+#             ^^^^^ source.gritql keyword.control.gritql
+#                  ^ source.gritql
+#                   ^ source.gritql punctuation.section.braces.begin.gritql
+>  // Should be evaluated as:
+#^^ source.gritql
+#  ^^ source.gritql comment.line.double-slash.gritql punctuation.definition.comment.gritql
+#    ^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql comment.line.double-slash.gritql
+>  // $b = ((1 + $a) * (2 + $a)) / (3 - $a),
+#^^ source.gritql
+#  ^^ source.gritql comment.line.double-slash.gritql punctuation.definition.comment.gritql
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql comment.line.double-slash.gritql
+>  //      ^-------------------^----- evaluation goes from left to right
+#^^ source.gritql
+#  ^^ source.gritql comment.line.double-slash.gritql punctuation.definition.comment.gritql
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql comment.line.double-slash.gritql
+>  $b = (1 + $a) * (2 + $a) / (3 - $a),
+#^^ source.gritql
+#  ^^ source.gritql variable.other.gritql
+#    ^ source.gritql
+#     ^ source.gritql keyword.operator.assignment.gritql
+#      ^ source.gritql
+#       ^ source.gritql punctuation.section.parens.begin.gritql
+#        ^ source.gritql constant.numeric.integer.gritql
+#         ^ source.gritql
+#          ^ source.gritql keyword.operator.arithmetic.gritql
+#           ^ source.gritql
+#            ^^ source.gritql variable.other.gritql
+#              ^ source.gritql punctuation.section.parens.end.gritql
+#               ^ source.gritql
+#                ^ source.gritql keyword.operator.arithmetic.gritql
+#                 ^ source.gritql
+#                  ^ source.gritql punctuation.section.parens.begin.gritql
+#                   ^ source.gritql constant.numeric.integer.gritql
+#                    ^ source.gritql
+#                     ^ source.gritql keyword.operator.arithmetic.gritql
+#                      ^ source.gritql
+#                       ^^ source.gritql variable.other.gritql
+#                         ^ source.gritql punctuation.section.parens.end.gritql
+#                          ^ source.gritql
+#                           ^ source.gritql keyword.operator.arithmetic.gritql
+#                            ^ source.gritql
+#                             ^ source.gritql punctuation.section.parens.begin.gritql
+#                              ^ source.gritql constant.numeric.integer.gritql
+#                               ^ source.gritql
+#                                ^ source.gritql keyword.operator.arithmetic.gritql
+#                                 ^ source.gritql
+#                                  ^^ source.gritql variable.other.gritql
+#                                    ^ source.gritql punctuation.section.parens.end.gritql
+#                                     ^ source.gritql punctuation.separator.comma.gritql
+>  // Should be evaluated as:
+#^^ source.gritql
+#  ^^ source.gritql comment.line.double-slash.gritql punctuation.definition.comment.gritql
+#    ^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql comment.line.double-slash.gritql
+>  // $c = ((1 + ($b * 2)) + ($b / 3)) - $b,
+#^^ source.gritql
+#  ^^ source.gritql comment.line.double-slash.gritql punctuation.definition.comment.gritql
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql comment.line.double-slash.gritql
+>  $c = 1 + $b * 2 + $b / 3 - $b,
+#^^ source.gritql
+#  ^^ source.gritql variable.other.gritql
+#    ^ source.gritql
+#     ^ source.gritql keyword.operator.assignment.gritql
+#      ^ source.gritql
+#       ^ source.gritql constant.numeric.integer.gritql
+#        ^ source.gritql
+#         ^ source.gritql keyword.operator.arithmetic.gritql
+#          ^ source.gritql
+#           ^^ source.gritql variable.other.gritql
+#             ^ source.gritql
+#              ^ source.gritql keyword.operator.arithmetic.gritql
+#               ^ source.gritql
+#                ^ source.gritql constant.numeric.integer.gritql
+#                 ^ source.gritql
+#                  ^ source.gritql keyword.operator.arithmetic.gritql
+#                   ^ source.gritql
+#                    ^^ source.gritql variable.other.gritql
+#                      ^ source.gritql
+#                       ^ source.gritql keyword.operator.arithmetic.gritql
+#                        ^ source.gritql
+#                         ^ source.gritql constant.numeric.integer.gritql
+#                          ^ source.gritql
+#                           ^ source.gritql keyword.operator.arithmetic.gritql
+#                            ^ source.gritql
+#                             ^^ source.gritql variable.other.gritql
+#                               ^ source.gritql punctuation.separator.comma.gritql
+>  // Should be evaluated as:
+#^^ source.gritql
+#  ^^ source.gritql comment.line.double-slash.gritql punctuation.definition.comment.gritql
+#    ^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql comment.line.double-slash.gritql
+>  // $d = (2 * $c) + (3 * $b),
+#^^ source.gritql
+#  ^^ source.gritql comment.line.double-slash.gritql punctuation.definition.comment.gritql
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql comment.line.double-slash.gritql
+>  $d = 2 * $c + 3 * $b,
+#^^ source.gritql
+#  ^^ source.gritql variable.other.gritql
+#    ^ source.gritql
+#     ^ source.gritql keyword.operator.assignment.gritql
+#      ^ source.gritql
+#       ^ source.gritql constant.numeric.integer.gritql
+#        ^ source.gritql
+#         ^ source.gritql keyword.operator.arithmetic.gritql
+#          ^ source.gritql
+#           ^^ source.gritql variable.other.gritql
+#             ^ source.gritql
+#              ^ source.gritql keyword.operator.arithmetic.gritql
+#               ^ source.gritql
+#                ^ source.gritql constant.numeric.integer.gritql
+#                 ^ source.gritql
+#                  ^ source.gritql keyword.operator.arithmetic.gritql
+#                   ^ source.gritql
+#                    ^^ source.gritql variable.other.gritql
+#                      ^ source.gritql punctuation.separator.comma.gritql
+>  $e = { d: $d },
+#^^ source.gritql
+#  ^^ source.gritql variable.other.gritql
+#    ^ source.gritql
+#     ^ source.gritql keyword.operator.assignment.gritql
+#      ^ source.gritql
+#       ^ source.gritql punctuation.section.braces.begin.gritql
+#        ^ source.gritql
+#         ^ source.gritql support.type.property-name.gritql
+#          ^ source.gritql punctuation.separator.key-value.gritql
+#           ^ source.gritql
+#            ^^ source.gritql variable.other.gritql
+#              ^ source.gritql
+#               ^ source.gritql punctuation.section.braces.end.gritql
+#                ^ source.gritql punctuation.separator.comma.gritql
+>  $f = { e: $e },
+#^^ source.gritql
+#  ^^ source.gritql variable.other.gritql
+#    ^ source.gritql
+#     ^ source.gritql keyword.operator.assignment.gritql
+#      ^ source.gritql
+#       ^ source.gritql punctuation.section.braces.begin.gritql
+#        ^ source.gritql
+#         ^ source.gritql support.type.property-name.gritql
+#          ^ source.gritql punctuation.separator.key-value.gritql
+#           ^ source.gritql
+#            ^^ source.gritql variable.other.gritql
+#              ^ source.gritql
+#               ^ source.gritql punctuation.section.braces.end.gritql
+#                ^ source.gritql punctuation.separator.comma.gritql
+>  $g = [$f],
+#^^ source.gritql
+#  ^^ source.gritql variable.other.gritql
+#    ^ source.gritql
+#     ^ source.gritql keyword.operator.assignment.gritql
+#      ^ source.gritql
+#       ^ source.gritql punctuation.section.brackets.begin.gritql
+#        ^^ source.gritql variable.other.gritql
+#          ^ source.gritql punctuation.section.brackets.end.gritql
+#           ^ source.gritql punctuation.separator.comma.gritql
+>  $a => $g[0].e.d
+#^^ source.gritql
+#  ^^ source.gritql variable.other.gritql
+#    ^ source.gritql
+#     ^^ source.gritql keyword.operator.rewrite.gritql
+#       ^ source.gritql
+#        ^^ source.gritql variable.other.gritql
+#          ^ source.gritql punctuation.section.brackets.begin.gritql
+#           ^ source.gritql constant.numeric.integer.gritql
+#            ^ source.gritql punctuation.section.brackets.end.gritql
+#             ^ source.gritql punctuation.accessor.gritql
+#              ^ source.gritql variable.other.property.gritql
+#               ^ source.gritql punctuation.accessor.gritql
+#                ^ source.gritql variable.other.property.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

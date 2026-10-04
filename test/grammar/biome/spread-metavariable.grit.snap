@@ -1,0 +1,32 @@
+>or {
+#^^ source.gritql keyword.operator.word.gritql
+#  ^ source.gritql
+#   ^ source.gritql punctuation.section.braces.begin.gritql
+>  `[$..., 1, $...]`,
+#^^ source.gritql
+#  ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#   ^ source.gritql string.quoted.other.snippet.gritql
+#    ^^^^ source.gritql string.quoted.other.snippet.gritql variable.language.spread.gritql
+#        ^^^^^ source.gritql string.quoted.other.snippet.gritql
+#             ^^^^ source.gritql string.quoted.other.snippet.gritql variable.language.spread.gritql
+#                 ^ source.gritql string.quoted.other.snippet.gritql
+#                  ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                   ^ source.gritql punctuation.separator.comma.gritql
+>  `{ key: 1, $... }`,
+#^^ source.gritql
+#  ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#   ^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#             ^^^^ source.gritql string.quoted.other.snippet.gritql variable.language.spread.gritql
+#                 ^^ source.gritql string.quoted.other.snippet.gritql
+#                   ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                    ^ source.gritql punctuation.separator.comma.gritql
+>  `fn($...)`
+#^^ source.gritql
+#  ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#   ^^^ source.gritql string.quoted.other.snippet.gritql
+#      ^^^^ source.gritql string.quoted.other.snippet.gritql variable.language.spread.gritql
+#          ^ source.gritql string.quoted.other.snippet.gritql
+#           ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

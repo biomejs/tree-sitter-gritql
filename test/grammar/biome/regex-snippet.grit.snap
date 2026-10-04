@@ -1,0 +1,44 @@
+>`console.log($message)` where {
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#             ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                     ^ source.gritql string.quoted.other.snippet.gritql
+#                      ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                       ^ source.gritql
+#                        ^^^^^ source.gritql keyword.control.gritql
+#                             ^ source.gritql
+#                              ^ source.gritql punctuation.section.braces.begin.gritql
+>    $name = "Lucy",
+#^^^^ source.gritql
+#    ^^^^^ source.gritql variable.other.gritql
+#         ^ source.gritql
+#          ^ source.gritql keyword.operator.assignment.gritql
+#           ^ source.gritql
+#            ^ source.gritql string.quoted.double.gritql punctuation.definition.string.begin.gritql
+#             ^^^^ source.gritql string.quoted.double.gritql
+#                 ^ source.gritql string.quoted.double.gritql punctuation.definition.string.end.gritql
+#                  ^ source.gritql punctuation.separator.comma.gritql
+>    $message <: r`"([a-zA-Z]*), Lucy"`($greeting) => `$name, $greeting`
+#^^^^ source.gritql
+#    ^^^^^^^^ source.gritql variable.other.gritql
+#            ^ source.gritql
+#             ^^ source.gritql keyword.operator.match.gritql
+#               ^ source.gritql
+#                ^ source.gritql string.regexp.gritql storage.type.string.gritql
+#                 ^ source.gritql string.regexp.gritql punctuation.definition.string.begin.gritql
+#                  ^^^^^^^^^^^^^^^^^^^ source.gritql string.regexp.gritql
+#                                     ^ source.gritql string.regexp.gritql punctuation.definition.string.end.gritql
+#                                      ^ source.gritql punctuation.section.parens.begin.gritql
+#                                       ^^^^^^^^^ source.gritql variable.other.gritql
+#                                                ^ source.gritql punctuation.section.parens.end.gritql
+#                                                 ^ source.gritql
+#                                                  ^^ source.gritql keyword.operator.rewrite.gritql
+#                                                    ^ source.gritql
+#                                                     ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                                                      ^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                                                           ^^ source.gritql string.quoted.other.snippet.gritql
+#                                                             ^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                                                                      ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

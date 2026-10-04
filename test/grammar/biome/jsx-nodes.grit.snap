@@ -1,0 +1,69 @@
+>engine biome(1.0)
+#^^^^^^ source.gritql keyword.control.directive.engine.gritql
+#      ^ source.gritql
+#       ^^^^^ source.gritql support.constant.engine.gritql
+#            ^ source.gritql punctuation.section.parens.begin.gritql
+#             ^^^ source.gritql constant.numeric.float.gritql
+#                ^ source.gritql punctuation.section.parens.end.gritql
+>language js(jsx)
+#^^^^^^^^ source.gritql keyword.control.directive.language.gritql
+#        ^ source.gritql
+#         ^^ source.gritql support.constant.language.gritql
+#           ^ source.gritql punctuation.section.parens.begin.gritql
+#            ^^^ source.gritql support.constant.language-flavor.gritql
+#               ^ source.gritql punctuation.section.parens.end.gritql
+>
+>or {
+#^^ source.gritql keyword.operator.word.gritql
+#  ^ source.gritql
+#   ^ source.gritql punctuation.section.braces.begin.gritql
+>  jsx_expression(),
+#^^ source.gritql
+#  ^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                ^ source.gritql punctuation.section.parens.begin.gritql
+#                 ^ source.gritql punctuation.section.parens.end.gritql
+#                  ^ source.gritql punctuation.separator.comma.gritql
+>  jsx_attribute(),
+#^^ source.gritql
+#  ^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#               ^ source.gritql punctuation.section.parens.begin.gritql
+#                ^ source.gritql punctuation.section.parens.end.gritql
+#                 ^ source.gritql punctuation.separator.comma.gritql
+>  jsx_element(),
+#^^ source.gritql
+#  ^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#             ^ source.gritql punctuation.section.parens.begin.gritql
+#              ^ source.gritql punctuation.section.parens.end.gritql
+#               ^ source.gritql punctuation.separator.comma.gritql
+>  jsx_self_closing_element(),
+#^^ source.gritql
+#  ^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                          ^ source.gritql punctuation.section.parens.begin.gritql
+#                           ^ source.gritql punctuation.section.parens.end.gritql
+#                            ^ source.gritql punctuation.separator.comma.gritql
+>  jsx_opening_element(),
+#^^ source.gritql
+#  ^^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                     ^ source.gritql punctuation.section.parens.begin.gritql
+#                      ^ source.gritql punctuation.section.parens.end.gritql
+#                       ^ source.gritql punctuation.separator.comma.gritql
+>  jsx_closing_element(),
+#^^ source.gritql
+#  ^^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                     ^ source.gritql punctuation.section.parens.begin.gritql
+#                      ^ source.gritql punctuation.section.parens.end.gritql
+#                       ^ source.gritql punctuation.separator.comma.gritql
+>  jsx_text(),
+#^^ source.gritql
+#  ^^^^^^^^ source.gritql entity.name.function.gritql
+#          ^ source.gritql punctuation.section.parens.begin.gritql
+#           ^ source.gritql punctuation.section.parens.end.gritql
+#            ^ source.gritql punctuation.separator.comma.gritql
+>  jsx_namespace_name()
+#^^ source.gritql
+#  ^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                    ^ source.gritql punctuation.section.parens.begin.gritql
+#                     ^ source.gritql punctuation.section.parens.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

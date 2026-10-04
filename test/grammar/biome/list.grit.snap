@@ -1,0 +1,45 @@
+>`const names = [$names]` where {
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^^^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                ^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                      ^ source.gritql string.quoted.other.snippet.gritql
+#                       ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                        ^ source.gritql
+#                         ^^^^^ source.gritql keyword.control.gritql
+#                              ^ source.gritql
+#                               ^ source.gritql punctuation.section.braces.begin.gritql
+>	if ($names[0] <: $names[-1]) {
+#^ source.gritql
+# ^^ source.gritql keyword.control.conditional.gritql
+#   ^ source.gritql
+#    ^ source.gritql punctuation.section.parens.begin.gritql
+#     ^^^^^^ source.gritql variable.other.gritql
+#           ^ source.gritql punctuation.section.brackets.begin.gritql
+#            ^ source.gritql constant.numeric.integer.gritql
+#             ^ source.gritql punctuation.section.brackets.end.gritql
+#              ^ source.gritql
+#               ^^ source.gritql keyword.operator.match.gritql
+#                 ^ source.gritql
+#                  ^^^^^^ source.gritql variable.other.gritql
+#                        ^ source.gritql punctuation.section.brackets.begin.gritql
+#                         ^^ source.gritql constant.numeric.integer.gritql
+#                           ^ source.gritql punctuation.section.brackets.end.gritql
+#                            ^ source.gritql punctuation.section.parens.end.gritql
+#                             ^ source.gritql
+#                              ^ source.gritql punctuation.section.braces.begin.gritql
+>		$names => $names[-1]
+#^^ source.gritql
+#  ^^^^^^ source.gritql variable.other.gritql
+#        ^ source.gritql
+#         ^^ source.gritql keyword.operator.rewrite.gritql
+#           ^ source.gritql
+#            ^^^^^^ source.gritql variable.other.gritql
+#                  ^ source.gritql punctuation.section.brackets.begin.gritql
+#                   ^^ source.gritql constant.numeric.integer.gritql
+#                     ^ source.gritql punctuation.section.brackets.end.gritql
+>	}
+#^ source.gritql
+# ^ source.gritql punctuation.section.braces.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

@@ -1,0 +1,37 @@
+>`Object.assign($args)` where {
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#               ^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                    ^ source.gritql string.quoted.other.snippet.gritql
+#                     ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                      ^ source.gritql
+#                       ^^^^^ source.gritql keyword.control.gritql
+#                            ^ source.gritql
+#                             ^ source.gritql punctuation.section.braces.begin.gritql
+>    register_diagnostic(
+#^^^^ source.gritql
+#    ^^^^^^^^^^^^^^^^^^^ source.gritql support.function.builtin.gritql
+#                       ^ source.gritql punctuation.section.parens.begin.gritql
+>        span = $args,
+#^^^^^^^^ source.gritql
+#        ^^^^ source.gritql variable.parameter.gritql
+#            ^ source.gritql
+#             ^ source.gritql keyword.operator.assignment.gritql
+#              ^ source.gritql
+#               ^^^^^ source.gritql variable.other.gritql
+#                    ^ source.gritql punctuation.separator.comma.gritql
+>        message = "Prefer object spread instead of `Object.assign()`"
+#^^^^^^^^ source.gritql
+#        ^^^^^^^ source.gritql variable.parameter.gritql
+#               ^ source.gritql
+#                ^ source.gritql keyword.operator.assignment.gritql
+#                 ^ source.gritql
+#                  ^ source.gritql string.quoted.double.gritql punctuation.definition.string.begin.gritql
+#                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql string.quoted.double.gritql
+#                                                                    ^ source.gritql string.quoted.double.gritql punctuation.definition.string.end.gritql
+>    )
+#^^^^ source.gritql
+#    ^ source.gritql punctuation.section.parens.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

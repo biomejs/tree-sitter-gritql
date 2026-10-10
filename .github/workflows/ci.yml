@@ -5,16 +5,7 @@ on:
     branches:
       - master
       - main
-    paths:
-      - grammar.js
-      - src/**
-      - bindings/**
-      - binding.gyp
-  pull_request_target:
-    types:
-      - opened
-      - edited
-      - synchronize
+  pull_request:
 
 jobs:
   test:
@@ -30,3 +21,4 @@ jobs:
           node-version: 18
       - run: npm install
       - run: npm test
+      - run: npm run test:grammar

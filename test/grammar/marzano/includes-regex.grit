@@ -1,0 +1,5 @@
+language js
+
+`console.log($_)` as $haystack where {
+   $haystack <: includes r"Hello"
+} => `console.log("Goodbye world!")`

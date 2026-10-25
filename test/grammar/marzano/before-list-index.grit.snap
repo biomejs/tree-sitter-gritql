@@ -1,0 +1,40 @@
+>engine marzano(0.1)
+#^^^^^^ source.gritql keyword.control.directive.engine.gritql
+#      ^ source.gritql
+#       ^^^^^^^ source.gritql support.constant.engine.gritql
+#              ^ source.gritql punctuation.section.parens.begin.gritql
+#               ^^^ source.gritql constant.numeric.float.gritql
+#                  ^ source.gritql punctuation.section.parens.end.gritql
+>language js
+#^^^^^^^^ source.gritql keyword.control.directive.language.gritql
+#        ^ source.gritql
+#         ^^ source.gritql support.constant.language.gritql
+>`[ $list ]` where {
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^ source.gritql string.quoted.other.snippet.gritql
+#   ^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#        ^^ source.gritql string.quoted.other.snippet.gritql
+#          ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#           ^ source.gritql
+#            ^^^^^ source.gritql keyword.control.gritql
+#                 ^ source.gritql
+#                  ^ source.gritql punctuation.section.braces.begin.gritql
+>    $new = before $list[1]
+#^^^^ source.gritql
+#    ^^^^ source.gritql variable.other.gritql
+#        ^ source.gritql
+#         ^ source.gritql keyword.operator.assignment.gritql
+#          ^ source.gritql
+#           ^^^^^^ source.gritql keyword.operator.word.gritql
+#                 ^ source.gritql
+#                  ^^^^^ source.gritql variable.other.gritql
+#                       ^ source.gritql punctuation.section.brackets.begin.gritql
+#                        ^ source.gritql constant.numeric.integer.gritql
+#                         ^ source.gritql punctuation.section.brackets.end.gritql
+>} => $new
+#^ source.gritql punctuation.section.braces.end.gritql
+# ^ source.gritql
+#  ^^ source.gritql keyword.operator.rewrite.gritql
+#    ^ source.gritql
+#     ^^^^ source.gritql variable.other.gritql
+>

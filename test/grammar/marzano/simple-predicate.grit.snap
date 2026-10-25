@@ -1,0 +1,94 @@
+>engine marzano(0.1)
+#^^^^^^ source.gritql keyword.control.directive.engine.gritql
+#      ^ source.gritql
+#       ^^^^^^^ source.gritql support.constant.engine.gritql
+#              ^ source.gritql punctuation.section.parens.begin.gritql
+#               ^^^ source.gritql constant.numeric.float.gritql
+#                  ^ source.gritql punctuation.section.parens.end.gritql
+>language js
+#^^^^^^^^ source.gritql keyword.control.directive.language.gritql
+#        ^ source.gritql
+#         ^^ source.gritql support.constant.language.gritql
+>
+>predicate is_foo($name) {
+#^^^^^^^^^ source.gritql meta.definition.gritql storage.type.function.gritql
+#         ^ source.gritql meta.definition.gritql
+#          ^^^^^^ source.gritql meta.definition.gritql entity.name.function.gritql
+#                ^ source.gritql meta.definition.gritql punctuation.section.parens.begin.gritql
+#                 ^^^^^ source.gritql meta.definition.gritql variable.parameter.gritql
+#                      ^ source.gritql meta.definition.gritql punctuation.section.parens.end.gritql
+#                       ^ source.gritql
+#                        ^ source.gritql punctuation.section.braces.begin.gritql
+>    $name <: `Foo`
+#^^^^ source.gritql
+#    ^^^^^ source.gritql variable.other.gritql
+#         ^ source.gritql
+#          ^^ source.gritql keyword.operator.match.gritql
+#            ^ source.gritql
+#             ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#              ^^^ source.gritql string.quoted.other.snippet.gritql
+#                 ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>predicate rewrite($name) {
+#^^^^^^^^^ source.gritql meta.definition.gritql storage.type.function.gritql
+#         ^ source.gritql meta.definition.gritql
+#          ^^^^^^^ source.gritql meta.definition.gritql entity.name.function.gritql
+#                 ^ source.gritql meta.definition.gritql punctuation.section.parens.begin.gritql
+#                  ^^^^^ source.gritql meta.definition.gritql variable.parameter.gritql
+#                       ^ source.gritql meta.definition.gritql punctuation.section.parens.end.gritql
+#                        ^ source.gritql
+#                         ^ source.gritql punctuation.section.braces.begin.gritql
+>    $name => `Bar`,
+#^^^^ source.gritql
+#    ^^^^^ source.gritql variable.other.gritql
+#         ^ source.gritql
+#          ^^ source.gritql keyword.operator.rewrite.gritql
+#            ^ source.gritql
+#             ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#              ^^^ source.gritql string.quoted.other.snippet.gritql
+#                 ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                  ^ source.gritql punctuation.separator.comma.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>
+>`<$name $props>$children</$name>` where {
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^ source.gritql string.quoted.other.snippet.gritql
+#  ^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#       ^ source.gritql string.quoted.other.snippet.gritql
+#        ^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#              ^ source.gritql string.quoted.other.snippet.gritql
+#               ^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                        ^^ source.gritql string.quoted.other.snippet.gritql
+#                          ^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                               ^ source.gritql string.quoted.other.snippet.gritql
+#                                ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                                 ^ source.gritql
+#                                  ^^^^^ source.gritql keyword.control.gritql
+#                                       ^ source.gritql
+#                                        ^ source.gritql punctuation.section.braces.begin.gritql
+>    if (is_foo($name)) {
+#^^^^ source.gritql
+#    ^^ source.gritql keyword.control.conditional.gritql
+#      ^ source.gritql
+#       ^ source.gritql punctuation.section.parens.begin.gritql
+#        ^^^^^^ source.gritql entity.name.function.gritql
+#              ^ source.gritql punctuation.section.parens.begin.gritql
+#               ^^^^^ source.gritql variable.other.gritql
+#                    ^ source.gritql punctuation.section.parens.end.gritql
+#                     ^ source.gritql punctuation.section.parens.end.gritql
+#                      ^ source.gritql
+#                       ^ source.gritql punctuation.section.braces.begin.gritql
+>          rewrite($name)
+#^^^^^^^^^^ source.gritql
+#          ^^^^^^^ source.gritql entity.name.function.gritql
+#                 ^ source.gritql punctuation.section.parens.begin.gritql
+#                  ^^^^^ source.gritql variable.other.gritql
+#                       ^ source.gritql punctuation.section.parens.end.gritql
+>    }
+#^^^^ source.gritql
+#    ^ source.gritql punctuation.section.braces.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

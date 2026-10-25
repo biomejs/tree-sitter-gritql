@@ -1,0 +1,14 @@
+>language js
+#^^^^^^^^ source.gritql keyword.control.directive.language.gritql
+#        ^ source.gritql
+#         ^^ source.gritql support.constant.language.gritql
+>
+>comment() => .
+#^^^^^^^ source.gritql entity.name.function.gritql
+#       ^ source.gritql punctuation.section.parens.begin.gritql
+#        ^ source.gritql punctuation.section.parens.end.gritql
+#         ^ source.gritql
+#          ^^ source.gritql keyword.operator.rewrite.gritql
+#            ^ source.gritql
+#             ^ source.gritql keyword.operator.gritql
+>

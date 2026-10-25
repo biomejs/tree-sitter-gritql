@@ -1,0 +1,25 @@
+>language js
+#^^^^^^^^ source.gritql keyword.control.directive.language.gritql
+#        ^ source.gritql
+#         ^^ source.gritql support.constant.language.gritql
+>like (0.9) { `const foo = 1;` } => `console.log('hello')`
+#^^^^ source.gritql keyword.operator.word.gritql
+#    ^ source.gritql
+#     ^ source.gritql punctuation.section.parens.begin.gritql
+#      ^^^ source.gritql constant.numeric.float.gritql
+#         ^ source.gritql punctuation.section.parens.end.gritql
+#          ^ source.gritql
+#           ^ source.gritql punctuation.section.braces.begin.gritql
+#            ^ source.gritql
+#             ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#              ^^^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                            ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                             ^ source.gritql
+#                              ^ source.gritql punctuation.section.braces.end.gritql
+#                               ^ source.gritql
+#                                ^^ source.gritql keyword.operator.rewrite.gritql
+#                                  ^ source.gritql
+#                                   ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                                    ^^^^^^^^^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                                                        ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>

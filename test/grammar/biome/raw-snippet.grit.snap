@@ -1,0 +1,14 @@
+>`console.log($message)` => raw`if(' // I like broken code"`
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#             ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                     ^ source.gritql string.quoted.other.snippet.gritql
+#                      ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                       ^ source.gritql
+#                        ^^ source.gritql keyword.operator.rewrite.gritql
+#                          ^ source.gritql
+#                           ^^^ source.gritql string.quoted.other.snippet.raw.gritql storage.type.string.gritql
+#                              ^ source.gritql string.quoted.other.snippet.raw.gritql punctuation.definition.string.begin.gritql
+#                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.raw.gritql
+#                                                          ^ source.gritql string.quoted.other.snippet.raw.gritql punctuation.definition.string.end.gritql
+>

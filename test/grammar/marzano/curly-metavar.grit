@@ -1,0 +1,11 @@
+pattern foo($bar) {
+    class_declaration(
+        name = $className,
+        heritage = contains "Component",
+        body = $body
+    ) => `const $className = $[bar]`
+}
+and {
+   $baz = "{ b = 2; }",
+   foo(bar = $baz)
+}

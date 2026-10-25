@@ -1,0 +1,18 @@
+engine marzano(0.1)
+language js
+
+pattern step1($x) {
+    bubble($x) file($name, $body) where {
+        $body <: contains `foo($x)`,
+        $body <: contains `bar($x)` => `baz($x)`,
+    }
+}
+
+pattern step2($x) {
+    contains `baz($x)` => `qux($x)`
+}
+
+multifile {
+    step1($x),
+    step2($x)
+}

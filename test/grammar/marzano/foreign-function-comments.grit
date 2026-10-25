@@ -1,0 +1,10 @@
+language js
+
+function custom_func() js {
+  console.log('hello')
+  // {}
+  /*
+   {} */ return "Hi!"
+}
+
+`console.log($x)` where { $x => custom_func() }

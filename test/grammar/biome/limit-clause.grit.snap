@@ -1,0 +1,41 @@
+>`console.$method($message)` => `console.warn($message)` where {
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#         ^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                ^ source.gritql string.quoted.other.snippet.gritql
+#                 ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                         ^ source.gritql string.quoted.other.snippet.gritql
+#                          ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                           ^ source.gritql
+#                            ^^ source.gritql keyword.operator.rewrite.gritql
+#                              ^ source.gritql
+#                               ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                                ^^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                                             ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                                                     ^ source.gritql string.quoted.other.snippet.gritql
+#                                                      ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                                                       ^ source.gritql
+#                                                        ^^^^^ source.gritql keyword.control.gritql
+#                                                             ^ source.gritql
+#                                                              ^ source.gritql punctuation.section.braces.begin.gritql
+>  $method <: not `error`
+#^^ source.gritql
+#  ^^^^^^^ source.gritql variable.other.gritql
+#         ^ source.gritql
+#          ^^ source.gritql keyword.operator.match.gritql
+#            ^ source.gritql
+#             ^^^ source.gritql keyword.operator.word.gritql
+#                ^ source.gritql
+#                 ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                  ^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                       ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>} limit 2 // Only find 2 files
+#^ source.gritql punctuation.section.braces.end.gritql
+# ^ source.gritql
+#  ^^^^^ source.gritql keyword.control.gritql
+#       ^ source.gritql
+#        ^ source.gritql constant.numeric.integer.gritql
+#         ^ source.gritql
+#          ^^ source.gritql comment.line.double-slash.gritql punctuation.definition.comment.gritql
+#            ^^^^^^^^^^^^^^^^^^ source.gritql comment.line.double-slash.gritql
+>

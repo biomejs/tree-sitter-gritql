@@ -1,0 +1,9 @@
+private pattern nice() {
+  `foo`
+}
+
+pattern foo() {
+  `bar`
+}
+
+nice()

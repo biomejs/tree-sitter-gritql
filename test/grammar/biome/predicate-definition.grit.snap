@@ -1,0 +1,43 @@
+>predicate program_contains_logger() {
+#^^^^^^^^^ source.gritql meta.definition.gritql storage.type.function.gritql
+#         ^ source.gritql meta.definition.gritql
+#          ^^^^^^^^^^^^^^^^^^^^^^^ source.gritql meta.definition.gritql entity.name.function.gritql
+#                                 ^ source.gritql meta.definition.gritql punctuation.section.parens.begin.gritql
+#                                  ^ source.gritql meta.definition.gritql punctuation.section.parens.end.gritql
+#                                   ^ source.gritql
+#                                    ^ source.gritql punctuation.section.braces.begin.gritql
+>  $program <: contains `logger`
+#^^ source.gritql
+#  ^^^^^^^^ source.gritql variable.other.gritql
+#          ^ source.gritql
+#           ^^ source.gritql keyword.operator.match.gritql
+#             ^ source.gritql
+#              ^^^^^^^^ source.gritql keyword.operator.word.gritql
+#                      ^ source.gritql
+#                       ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                        ^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                              ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>`console.log` => `logger.info` where {
+#^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+# ^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#            ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#             ^ source.gritql
+#              ^^ source.gritql keyword.operator.rewrite.gritql
+#                ^ source.gritql
+#                 ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                  ^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                             ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                              ^ source.gritql
+#                               ^^^^^ source.gritql keyword.control.gritql
+#                                    ^ source.gritql
+#                                     ^ source.gritql punctuation.section.braces.begin.gritql
+>  program_contains_logger()
+#^^ source.gritql
+#  ^^^^^^^^^^^^^^^^^^^^^^^ source.gritql entity.name.function.gritql
+#                         ^ source.gritql punctuation.section.parens.begin.gritql
+#                          ^ source.gritql punctuation.section.parens.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

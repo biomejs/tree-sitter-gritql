@@ -1,0 +1,8 @@
+engine marzano(0.1)
+language js
+
+`function $foo() { $body }` where {
+    maybe false,
+    maybe $body => `baz`,
+    $foo => `bar`
+}

@@ -1,0 +1,68 @@
+>sequential {
+#^^^^^^^^^^ source.gritql keyword.control.gritql
+#          ^ source.gritql
+#           ^ source.gritql punctuation.section.braces.begin.gritql
+>    bubble file($body) where $body <: contains `console.log($message)` => `console.warn($message)`,
+#^^^^ source.gritql
+#    ^^^^^^ source.gritql keyword.control.gritql
+#          ^ source.gritql
+#           ^^^^ source.gritql entity.name.function.gritql
+#               ^ source.gritql punctuation.section.parens.begin.gritql
+#                ^^^^^ source.gritql variable.other.gritql
+#                     ^ source.gritql punctuation.section.parens.end.gritql
+#                      ^ source.gritql
+#                       ^^^^^ source.gritql keyword.control.gritql
+#                            ^ source.gritql
+#                             ^^^^^ source.gritql variable.other.gritql
+#                                  ^ source.gritql
+#                                   ^^ source.gritql keyword.operator.match.gritql
+#                                     ^ source.gritql
+#                                      ^^^^^^^^ source.gritql keyword.operator.word.gritql
+#                                              ^ source.gritql
+#                                               ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                                                ^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                                                            ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                                                                    ^ source.gritql string.quoted.other.snippet.gritql
+#                                                                     ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                                                                      ^ source.gritql
+#                                                                       ^^ source.gritql keyword.operator.rewrite.gritql
+#                                                                         ^ source.gritql
+#                                                                          ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                                                                           ^^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                                                                                        ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                                                                                                ^ source.gritql string.quoted.other.snippet.gritql
+#                                                                                                 ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                                                                                                  ^ source.gritql punctuation.separator.comma.gritql
+>    bubble file($body) where $body <: contains `console.warn($message)` => `console.info($message)`
+#^^^^ source.gritql
+#    ^^^^^^ source.gritql keyword.control.gritql
+#          ^ source.gritql
+#           ^^^^ source.gritql entity.name.function.gritql
+#               ^ source.gritql punctuation.section.parens.begin.gritql
+#                ^^^^^ source.gritql variable.other.gritql
+#                     ^ source.gritql punctuation.section.parens.end.gritql
+#                      ^ source.gritql
+#                       ^^^^^ source.gritql keyword.control.gritql
+#                            ^ source.gritql
+#                             ^^^^^ source.gritql variable.other.gritql
+#                                  ^ source.gritql
+#                                   ^^ source.gritql keyword.operator.match.gritql
+#                                     ^ source.gritql
+#                                      ^^^^^^^^ source.gritql keyword.operator.word.gritql
+#                                              ^ source.gritql
+#                                               ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                                                ^^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                                                             ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                                                                     ^ source.gritql string.quoted.other.snippet.gritql
+#                                                                      ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+#                                                                       ^ source.gritql
+#                                                                        ^^ source.gritql keyword.operator.rewrite.gritql
+#                                                                          ^ source.gritql
+#                                                                           ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.begin.gritql
+#                                                                            ^^^^^^^^^^^^^ source.gritql string.quoted.other.snippet.gritql
+#                                                                                         ^^^^^^^^ source.gritql string.quoted.other.snippet.gritql variable.other.gritql
+#                                                                                                 ^ source.gritql string.quoted.other.snippet.gritql
+#                                                                                                  ^ source.gritql string.quoted.other.snippet.gritql punctuation.definition.string.end.gritql
+>}
+#^ source.gritql punctuation.section.braces.end.gritql
+>

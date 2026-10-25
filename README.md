@@ -20,6 +20,18 @@ language js
 
 Explore the [interactive tutorial](https://docs.grit.io/tutorials/gritql) to learn more about GritQL.
 
+## TextMate Grammar
+
+A TextMate grammar for GritQL lives in [`syntaxes/gritql.tmLanguage.json`](syntaxes/gritql.tmLanguage.json) and ships with the npm package. Its scope name is `source.gritql`, and it covers both the Grit (Marzano) syntax in this repo and the GritQL dialect used by [Biome](https://biomejs.dev/) plugins. It can be used by VS Code, Shiki, and GitHub Linguist.
+
+The grammar has snapshot tests that run [`vscode-tmgrammar-test`](https://github.com/PanAeon/vscode-tmgrammar-test) against the fixtures in `test/grammar/`. The fixtures are copied unchanged from real GritQL sources (Biome's and Marzano's test suites, and this repo's corpus); [`test/grammar/SOURCES.md`](test/grammar/SOURCES.md) lists where each one came from. Files in `test/grammar/biome/` are valid Biome plugins, and files in `test/grammar/marzano/` are valid for Grit's Marzano engine.
+
+```sh
+npm run test:grammar
+```
+
+After changing the grammar, regenerate the snapshots with `npx vscode-tmgrammar-snap -s source.gritql -g syntaxes/gritql.tmLanguage.json --updateSnapshot "test/grammar/**/*.grit"`, then review the `.snap` diffs.
+
 ## References
 - [GritQL Language Overview](https://docs.grit.io/language/overview)
 - [GritQL Language Reference](https://docs.grit.io/language/syntax)

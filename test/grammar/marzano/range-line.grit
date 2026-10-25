@@ -1,0 +1,5 @@
+language js
+`const $x` where {
+    $x <: within range(start_line=2, end_line=3),
+    $x => `FOO = 5`
+}

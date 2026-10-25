@@ -606,6 +606,7 @@ module.exports = grammar({
         'universal',
         'sql',
         'toml',
+        'nix',
         'php',
         'c',
         'ruby',
